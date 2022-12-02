@@ -104,4 +104,4 @@ theme: landscape
 deploy:
   type: git
   repo: https://github.com/liaowenxuan/liaowenxuan.github.io.git
-  baranch: master
+  baranch: main
