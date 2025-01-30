@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style id="1">
+        /* 基础部分 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --theme-color: #000000;
+        }
+
+        .w {
+            width: 1660px;
+            margin: 0 auto;
+        }
+
+        /* 导航栏 */
+        nav {
+            height: 54px;
+            /* background-color: blue; */
+            box-shadow: #000000 1px 1px 1px;
+            overflow: hidden;
+        }
+
+        /* 右侧 */
+        .nav li,
+        .nav li a {
+            list-style: none;
+            text-decoration: none;
+            color: var(--theme-color);
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 40px;
+        }
+
+        .nav {
+            float: right;
+            height: 40px;
+            margin-top: 7px;
+        }
+
+        .nav li {
+            float: left;
+            margin: 0 40px;
+        }
+
+        /* 左侧 */
+
+        .logo {
+            float: left;
+        }
+
+        .logo img {
+            margin-top: 4px;
+            height: 50px;
+        }
+    </style>
+    <style id="2">
+        /* banner部分 */
+        .banner {
+            margin-top: 1px;
+            height: 600px;
+            position: relative;
+            background-image: url("images/banner.png");
+            background-size: cover;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        /* 右侧 */
+        .banner-right {
+            position: absolute;
+            top: 130px;
+            right: 320px;
+            width: 400px;
+        }
+
+        .banner-right>.banner-title {
+            font-size: 46px;
+            font-weight: bold;
+        }
+
+        .banner-right>.banner-subtitle {
+            font-size: 12px;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 100px;
+        }
+
+        .banner-right .text,
+        .banner-right a {
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: 200;
+            margin-bottom: 20px;
+        }
+
+        .banner-right a {
+            color: var(--theme-color);
+            display: block;
+            width: 150px;
+            height: 50px;
+            border: #000000 solid 1px;
+            border-radius: 40px;
+            background-color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <style id="3">
+        .admin-excel {
+            height: 600px;
+            background-image: url("images/sp-banner/widget-2.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+        }
+
+        .admin-excel-title {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: #888 0 0 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-weight: 100;
+            color: #666;
+            text-align: center;
+        }
+
+        .admin-first {
+            width: 150px;
+            height: 350px;
+            /* background-color: #efefef; */
+            box-shadow: #444 0px 0px 5px;
+            float: left;
+            margin-right: 25px;
+            border-radius: 7px;
+            background-color: #ffffffcc;
+        }
+
+        .admin-first>div {
+            margin: 15px;
+        }
+
+        .admin-first img {
+            width: 120px;
+            margin-top: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: #888 0px 0px 2px;
+        }
+
+        .admin-first p {
+            margin-top: 5px;
+        }
+
+        .admin-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .admin-appellation,
+        .admin-jointime {
+            font-size: 14px;
+            color: #666;
+            font-weight: 200;
+        }
+
+        /* 普通管理员 */
+        .admin {
+            width: 320px;
+            height: 130px;
+            /* background-color: #336; */
+            float: left;
+            box-shadow: #444 0px 0px 5px;
+            margin: 0 25px;
+            border-radius: 7px;
+            background-color: #ffffffcc;
+        }
+
+        .admin img {
+            width: 80px;
+            border-radius: 50%;
+            float: left;
+            margin: 25px 0;
+            margin-left: 25px;
+            overflow: hidden;
+        }
+
+        .admin-last-name-- {
+            float: left;
+            margin: 17px 25px;
+        }
+    </style><!--  -->
+    <style id="4">
+        .saying {
+            padding-top: 60px;
+            width: 1660px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .saying-title {
+            margin-bottom: 60px;
+        }
+
+        .saying-into {
+            width: 1460px;
+            height: 110px;
+            margin: 60px auto;
+            box-shadow: #aaa 0 0 1px;
+            border-radius: 7px;
+        }
+
+        .saying-into img {
+            width: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            float: left;
+            margin: 15px;
+            margin-left: 20px;
+
+        }
+
+        .saying-right {
+            height: 110px;
+            width: 1345px;
+            /* background-color: #888; */
+            float: left;
+            overflow: hidden;
+        }
+
+        .saying-text {
+            margin-left: 15px;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 65px;
+            font-family: "宋体";
+        }
+
+        .saying-human,
+        .saying-time {
+            text-align: right;
+            font-size: 16px;
+            font-weight: 200;
+            margin-right: 20px;
+        }
+    </style>
+    <style id="5-1">
+        .sp-lwx-lqq,
+        .sp-tea-mgc {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            height: 1080px;
+        }
+
+        .sp-1-left {
+            padding-top: 20px;
+            float: left;
+        }
+
+        .sp-lwx-lqq>video {
+            width: 100%;
+            max-width: 1920px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .sp-lwx-lqq-title {
+            margin: 60px 0;
+        }
+
+        .sp-lwx-lqq-title span {
+            color: #ffb7c5;
+            text-shadow: #ffb7c5 0px 0px 5px;
+        }
+
+        .sp-lwx-lqq-title .title,
+        .sp-lwx-lqq-title .subtitle,
+        .sp-2-title .title,
+        .sp-2-title .subtitle {
+            color: #fff;
+            text-shadow: #f7eff1 0 0 5px;
+        }
+
+        .sp-1-left .widget-1 {
+            position: relative;
+            width: 350px;
+            height: 150px;
+            background-color: #f7eff1;
+            border-radius: 20px;
+            border: #ffb7c5 solid 2px;
+            /* padding-top: 60px; */
+        }
+
+        .widget-1-1 {
+            float: left;
+        }
+
+        .widget-1-1>p {
+            text-align: center;
+            margin-top: 4px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 200;
+        }
+
+        .sp-1-left .widget-1 img {
+            width: 75px;
+            margin: auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            /* box-shadow: #666 0 4px 5px; */
+            border: #ffb7c5 solid 2px;
+        }
+
+        .sp-1-left .widget-1 span {
+            color: #ffb7c5;
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: #ffb7c5 0px 0px 5px;
+        }
+
+        .sp-1-user-icon {
+            position: absolute;
+            top: -45px;
+            transform: translateX(-50%);
+            left: 50%;
+            width: 238px;
+        }
+
+        .sp-1-widget-1-text p {
+            color: #333;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 5px;
+            /* margin-top: 4; */
+        }
+
+        .sp-1-widget-1-text {
+            width: 265px;
+            height: 130px;
+            position: absolute;
+            top: 65px;
+            left: 20px;
+        }
+    </style>
+    <style id="5-2">
+        .widget-2 {
+            width: 350px;
+            height: 75px;
+            background-color: #f7eff1;
+            border: #ffb7c5 solid 2px;
+            border-radius: 20px;
+            margin-top: 20px;
+            background-image: url("images/sp-banner/widget-2.jpg");
+            position: relative;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .widget-2-text {
+            width: 350px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .widget-2 p {
+            color: #f7eff1;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+    </style>
+    <style id="5-3">
+        .widget-3 {
+            width: 350px;
+            height: 100px;
+            margin-top: 20px;
+            border-radius: 20px;
+            background-color: #ffffffcc;
+            border: #ffffffcc solid 2px;
+        }
+
+        .widget-3-cover {
+            float: left;
+            overflow: hidden;
+        }
+
+        .widget-3-cover img {
+            width: 80px;
+            margin: 10px 15px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .widget-3-info {
+            margin-top: 12px;
+            margin-left: 15px;
+        }
+
+        .widget-3-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .widget-3-singer {
+            font-size: 14px;
+            font-weight: 200;
+            color: #444;
+        }
+
+        .widget-3-btn {
+            margin-top: 2px;
+        }
+
+        .widget-3-btn button {
+            width: 100px;
+            height: 30px;
+            color: #666;
+            background-color: #ffffff00;
+            padding: 6px;
+            border-radius: 15px;
+            border: #666 solid 2px;
+            transition: .2s;
+            font-weight: 200;
+            cursor: pointer;
+        }
+    </style>
+    <style id="5-4">
+        .widget-4 {
+            width: 350px;
+            border: #ffb7c5 solid 2px;
+            height: 150px;
+            border-radius: 20px;
+            margin-top: 20px;
+            background-color: #ffffffcc;
+            position: relative;
+        }
+
+        .wifeday-title {
+            color: #444;
+            font-weight: 200;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #wifedays {
+            color: #ffb7c5;
+            font-size: 28px;
+            text-shadow: #ffb7c5 0 0 5px;
+            font-weight: bold;
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wifedate {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: 200;
+            color: #333;
+        }
+    </style>
+    <style id="5-5">
+        .sp-1-right {
+            float: right;
+            position: absolute;
+            right: 28%;
+            margin-top: -50px;
+        }
+
+        .sp-1-time>#time {
+            color: #fff;
+            font-size: 100px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        .weekday-today {
+            margin-top: 125px;
+        }
+
+        #today,
+        #weekday {
+            width: 150px;
+            position: none;
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <style id="swiper">
+        html,
+        body {
+            position: relative;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 950px;
+            overflow: hidden;
+            --swiper-pagination-color: #ffb7c5;
+            --swiper-navigation-size: 65px;
+            --swiper-navigation-color: #ffb7c5;
+        }
+    </style>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <style id="6">
+        .sp-tea-mgc {
+            position: relative;
+        }
+
+        .sp-tea-mgc img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .sp-2-title {
+            margin: 60px 0;
+        }
+
+        .sp-2-title span {
+            color: #0f2eb8;
+            text-shadow: #0f2eb8 0 0 5px;
+        }
+    </style>
+    <style id="6-1">
+        .widget-5 {
+            width: 350px;
+            height: 150px;
+            border-radius: 20px;
+            margin-top: 40px;
+            border: #0F63B8 solid 2px;
+            background-color: #ffffffcc;
+            position: relative;
+        }
+
+        .sp-2-icon>img {
+            width: 75px;
+            border-radius: 50%;
+            border: #0F63B8 solid 2px;
+            margin: auto 20px;
+        }
+
+        #sp-icon-1,
+        #sp-icon-2 {
+            position: absolute;
+        }
+
+        #sp-icon-1 {
+            left: 0;
+        }
+
+        #sp-icon-2 {
+            right: 0;
+        }
+
+        .sp-2-icon-text {
+            position: absolute;
+            top: 37px;
+            width: 238px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .sp-2-icon-text p {
+            color: #222;
+            width: 75px;
+            font-size: 16px;
+            font-weight: 200;
+            margin: 6px 20px;
+            position: absolute;
+            text-align: center;
+        }
+
+        .sp-2-icon-text p:nth-child(1) {
+            left: 0;
+            padding-top: 1px;
+            /* font-weight: bold; */
+        }
+
+        .sp-2-icon-text p:nth-child(2) {
+            right: 0;
+        }
+
+        .sp-2-icon {
+            width: 238px;
+            margin: 0 auto;
+            height: 84px;
+            position: relative;
+            z-index: 999;
+            top: -42px;
+        }
+
+        .widget-5-text-js {
+            width: 298px;
+            margin-left: 20px;
+            margin-top: -19px;
+        }
+
+        .widget-5-text-js p span {
+            color: #0F63B8;
+            text-shadow: #0F63B8 0 0 5px;
+        }
+
+        .widget-5-text-js p:nth-child(1) span {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .widget-5-text-js p:nth-child(2) span {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .widget-5-text-js p {
+            color: #666;
+            font-size: 18px;
+            font-weight: 200;
+        }
+
+        .widget-5-text-js p:nth-child(1) {
+            margin-bottom: 5px;
+        }
+    </style>
+    <style id="6-2">
+        .widget-6 {
+            width: 350px;
+            border: #0F63B8 solid 2px;
+            height: 150px;
+            border-radius: 20px;
+            margin-top: 20px;
+            background-color: #ffffffcc;
+            position: relative;
+        }
+
+        .widget-6-title {
+            color: #444;
+            font-weight: 200;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #widget-6-lover {
+            color: #0F63B8;
+            font-size: 28px;
+            text-shadow: #0F63B8 0 0 5px;
+            font-weight: bold;
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .lovedate-3 {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: 200;
+            color: #333;
+        }
+    </style>
+    <style id="6-3">
+        .widget-7 {
+            width: 350px;
+            height: 100px;
+            margin-top: 20px;
+            border-radius: 20px;
+            background-color: #ffffffcc;
+            border: #ffffffcc solid 2px;
+            position: relative;
+            z-index: 0;
+        }
+
+        .widget-7-cover {
+            float: left;
+            overflow: hidden;
+        }
+
+        .widget-7-cover img {
+            width: 80px;
+            margin: 10px 15px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .widget-7-info {
+            margin-top: 12px;
+            margin-left: 110px;
+            /* float: left; */
+        }
+
+        .widget-7-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .widget-7-singer {
+            font-size: 14px;
+            font-weight: 200;
+            color: #444;
+        }
+
+        .widget-7-btn {
+            float: left;
+            margin-left: 110px;
+            margin-top: 2px;
+        }
+
+        .widget-7-btn button {
+            width: 100px;
+            height: 30px;
+            color: #666;
+            background-color: #ffffff00;
+            padding: 6px;
+            border-radius: 15px;
+            border: #666 solid 2px;
+            transition: .2s;
+            font-weight: 200;
+            cursor: pointer;
+        }
+    </style>
+    <style id="6-4">
+        .widget-8 {
+            width: 350px;
+            height: 75px;
+            background-color: #f7eff1;
+            border: #0F63B8 solid 2px;
+            border-radius: 20px;
+            margin-top: 20px;
+            background-image: url("images/sp-banner/widget-8.jpg");
+            position: relative;
+            background-size: cover;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+
+        .widget-8-text {
+            width: 350px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .widget-8 p {
+            color: #f7eff1;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+    </style>
+    <style id="6-5">
+        .sp-2-right {
+            float: right;
+            position: absolute;
+            right: 29.5%;
+            top: 13%;
+        }
+
+        .sp-2-time>#time2 {
+            color: #fff;
+            font-size: 100px;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        .weekday-today {
+            margin-top: 125px;
+        }
+
+        #today2,
+        #weekday2 {
+            width: 150px;
+            position: none;
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <style id="7">
+        .charts {
+            overflow: hidden;
+            padding-bottom: 60px;
+        }
+
+        .charts-title {
+            margin: 60px;
+        }
+
+        .chart {
+            width: 800px;
+            height: 450px;
+            margin: 15px;
+            /* background-color: #888; */
+            /* border: #ffffff00 solid 2px; */
+            box-shadow: #333 0 0 5px;
+            border-radius: 20px;
+            float: left;
+            /* position: relative; */
+        }
+
+        #chart-1,
+        #chart-2,
+        #chart-3,
+        #chart-4 {
+            width: 750px;
+            height: 400px;
+            /* position: absolute; */
+            margin: 25px 25px 0px;
+        }
+    </style>
+    <style id="8">
+        .humanstar-excel {
+            overflow: hidden;
+            background-image: url("images/sp-banner/human-excel.png");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            height: 750px;
+        }
+
+        .humanstar-excel-title {
+            margin: 60px 0;
+        }
+
+        .humanstar-excel-title p {
+            color: #fff;
+        }
+
+        .humanstar-hang {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .humanstar {
+            width: 300px;
+            height: 120px;
+            background-color: #f7eff1;
+            float: left;
+            border-radius: 20px;
+            margin: 20px 20px;
+        }
+
+        .humanstar img {
+            width: 80px;
+            margin: 20px;
+            margin-bottom: 5px;
+            border-radius: 15px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .humanstar-name-day {
+            margin: 20px 10px;
+        }
+
+        .humanstar-name-day p:nth-child(1) {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .humanstar-day {
+            font-size: 12px;
+            font-weight: 200;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="w">
+            <!-- 左边logo -->
+            <div class="logo">
+                <img src="images/logo/logo.png" alt="">
+            </div>
+            <!-- 右侧导航 -->
+            <div class="nav">
+                <ul>
+                    <li><a href="">主页</a></li>
+                    <li><a href="">其他</a></li>
+                    <li><a
+                            href="https://qm.qq.com/cgi-bin/qm/qr?k=QAMk6gxdaSa0qtyix2sFpuRLVxteO-xu&jump_from=webapi&authKey=PXfUx94FrZ9lAh7Ec54YKSY10stDnldYz8pp/RdBxx/emN3cWKv/OOgt9q4rBDMX">入群</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- banner显示区 -->
+    <div class="banner">
+        <!-- 右侧入群模块 -->
+        <div class="banner-right">
+            <p class="banner-title">かえりみちの微風</p>
+            <p class="banner-subtitle">回家归途中的微风</p>
+            <p class="text">这是一封仅你可见的入群邀请函。——？</p>
+            <p class="text" style="margin-bottom: 80px;">进群玩玩也不错呢——？</p>
+            <!-- 入群按钮 -->
+            <a target="_blank"
+                href="https://qm.qq.com/cgi-bin/qm/qr?k=QAMk6gxdaSa0qtyix2sFpuRLVxteO-xu&jump_from=webapi&authKey=PXfUx94FrZ9lAh7Ec54YKSY10stDnldYz8pp/RdBxx/emN3cWKv/OOgt9q4rBDMX">加入群聊</a>
+        </div>
+    </div>
+    <!-- 部分管理员表 -->
+    <div class="admin-excel">
+        <div class="w">
+            <!-- 标题部分 -->
+            <div class="admin-excel-title">
+                <p class="title" style="color: #fff;text-shadow: #fff 0 0 5px;">部分管理员表</p>
+                <p class="subtitle" style="color: #fff;">admin</p>
+            </div>
+            <!-- 左侧群主部分 -->
+            <div class="admin-first">
+                <div>
+                    <!-- 头像 -->
+                    <img src="images/admin/first.jpg" alt="">
+                    <!-- 名字和称谓 -->
+                    <p class="admin-name">Data-19C</p>
+                    <p class="admin-appellation">群主</p>
+                    <!-- 入群时间 -->
+                    <p class="admin-jointime">2023/1/30</p>
+                </div>
+            </div>
+            <!-- 右侧普通管理员部分 -->
+            <div class="admin-last-1" style="height: 175px;">
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_f55d085f0a8e03969b4b6051512a6448.png" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">Chafues'ill</p>
+                        <p class="admin-appellation">茶茶殿下</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2023/4/7</p>
+                    </div>
+                </div>
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_5ce65d95ba04b16be1c7f6a215bef114.jpg" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">南缘沐雨</p>
+                        <p class="admin-appellation">南宫喵</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2024/2/16</p>
+                    </div>
+                </div>
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_a03035f86695695608fab4c4d18f92df.png" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">老黑Hentai|UWU</p>
+                        <p class="admin-appellation">群老婆</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2024/4/18</p>
+                    </div>
+                </div>
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_5f6a2f30c9f763f5fccd6ddcd99475cc.jpg" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">凝雨才不是笨蛋！</p>
+                        <p class="admin-appellation">充满智慧</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2023/3/29</p>
+                    </div>
+                </div>
+            </div>
+            <!-- qqqq -->
+            <div class="admin-last-2" style="height: 175px;padding-top: 45px;">
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_5ff4f3940554b013a616c5bd521f2b1b.jpg" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">生姜姜姜</p>
+                        <p class="admin-appellation">群ba厨</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2023/2/26</p>
+                    </div>
+                </div>
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_d68ebd05c50225fde3554380fb0b4d86.jpg" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">Snownight？</p>
+                        <p class="admin-appellation">夜雪猫猫</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2024/5/12</p>
+                    </div>
+                </div>
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_9c42162be1e1bc1c01a7cc5715ff6c2e.jpg" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">スターフォール</p>
+                        <p class="admin-appellation">小流星</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2024/3/1</p>
+                    </div>
+                </div>
+                <!-- xxx -->
+                <div class="admin">
+                    <!-- 头像 -->
+                    <img src="images/admin/b_72ef98a531adf8150fd0de87029ce6ac.jpg" alt="">
+                    <div class="admin-last-name--">
+                        <!-- 名字和称谓 -->
+                        <p class="admin-name">かえりみちの微風</p>
+                        <p class="admin-appellation">是小静哦~</p>
+                        <!-- 入群时间 -->
+                        <p class="admin-jointime">2023/1/30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 名言 -->
+    <div class="saying">
+        <div class="w">
+            <!-- 标题部分 -->
+            <div class="saying-title">
+                <p class="title">名言</p>
+                <p class="subtitle">Saying</p>
+            </div>
+            <!-- 名言 -->
+            <div class="saying-into">
+                <!-- 左侧头像 -->
+                <img src="images/admin/b_5f6a2f30c9f763f5fccd6ddcd99475cc.jpg" alt="">
+                <div class="saying-right">
+                    <!-- 名言 -->
+                    <p class="saying-text">无须囿于眼前，不必囚于身后。</p>
+                    <!-- 名人 -->
+                    <p class="saying-human">—— 凝雨才不是笨蛋！</p>
+                    <!-- 时间 -->
+                    <p class="saying-time">2025/1/27</p>
+                </div>
+            </div>
+            <!-- 名言 -->
+            <div class="saying-into">
+                <!-- 左侧头像 -->
+                <img src="images/admin/b_d68ebd05c50225fde3554380fb0b4d86.jpg" alt="">
+                <div class=" saying-right">
+                    <!-- 名言 -->
+                    <p class="saying-text">当妄图把救赎的希望放在他人身上时，现在的我...很可悲吧</p>
+                    <!-- 名人 -->
+                    <p class="saying-human">—— Snownight？</p>
+                    <!-- 时间 -->
+                    <p class="saying-time">2025/1/27</p>
+                </div>
+            </div>
+            <!-- 名言 -->
+            <div class="saying-into">
+                <!-- 左侧头像 -->
+                <img src="images/admin/b_72ef98a531adf8150fd0de87029ce6ac.jpg" alt="">
+                <div class="saying-right">
+                    <!-- 名言 -->
+                    <p class="saying-text">我努力所做的一切只是为了不被嘲笑。</p>
+                    <!-- 名人 -->
+                    <p class="saying-human">—— かえりみちの微風</p>
+                    <!-- 时间 -->
+                    <p class="saying-time">2025/1/26</p>
+                </div>
+            </div>
+            <!-- 名言 -->
+            <div class="saying-into">
+                <!-- 左侧头像 -->
+                <img src="images/admin/first.jpg" alt="">
+                <div class="saying-right">
+                    <!-- 名言 -->
+                    <p class="saying-text">world.execute(me);</p>
+                    <!-- 名人 -->
+                    <p class="saying-human">—— Data-19C</p>
+                    <!-- 时间 -->
+                    <p class="saying-time">2024/11/4</p>
+                </div>
+            </div>
+            <!-- 名言 -->
+            <div class="saying-into">
+                <!-- 左侧头像 -->
+                <img src="images/admin/b_72ef98a531adf8150fd0de87029ce6ac.jpg" alt="">
+                <div class="saying-right">
+                    <!-- 名言 -->
+                    <p class="saying-text">走在人群中的你，仍是一个人。</p>
+                    <!-- 名人 -->
+                    <p class="saying-human">—— かえりみちの微風</p>
+                    <!-- 时间 -->
+                    <p class="saying-time">2024/6/24</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 恋爱特区 -->
+    <div class="love">
+        <div class="w">
+            <div class="lover" style="margin-bottom: 60px;">
+                <div class="title">恋爱特区</div>
+                <div class="subtitle">Special Love</div>
+            </div>
+        </div>
+        <div class="swiper mySwiper swiper-no-swiping">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- 廖文轩和李芊芊特区 -->
+                    <div class="sp-lwx-lqq">
+                        <!-- 动态背景 -->
+                        <video autoplay loop preload="metadata" muted>
+                            <source src="videos/arona_workpage_nighttime_Idle_03-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="w">
+                            <!-- 标题 -->
+                            <div class="sp-lwx-lqq-title">
+                                <p class="title">
+                                    <span>廖文轩＆李芊芊</span>恋爱特区
+                                </p>
+                                <p class="subtitle">
+                                    <span>Liao Wenxuan ＆ Li Qianqian</span> Special Love
+                                </p>
+                            </div>
+                            <!-- 左侧部分 -->
+                            <div class="sp-1-left">
+                                <!-- 小组件1 -->
+                                <div class="widget-1">
+                                    <!-- 头像 -->
+                                    <div class="sp-1-user-icon">
+                                        <div class="widget-1-1">
+                                            <img src="images/sp-user-icon/lwx.jpg" alt=""> <!-- lwx -->
+                                            <p>廖文轩</p>
+                                        </div>
+                                        <div class="widget-1-1">
+                                            <img src="images/sp-user-icon/lqq.jpg" alt=""> <!-- Lqq -->
+                                            <p>李芊芊</p>
+                                        </div>
+                                    </div>
+                                    <!-- 文字---js -->
+                                    <div class="sp-1-widget-1-text">
+                                        <p>
+                                            我们已相恋<span id="lovedays-1"></span>天啦＞w＜
+                                        </p>
+                                        <p>我们相识于<span style="font-size: 22px">2023年01月27日</span></p>
+                                    </div>
+                                </div>
+                                <!-- 小组件4 -->
+                                <div class="widget-4">
+                                    <!-- 倒计时 -->
+                                    <p class="wifeday-title">距离结婚那天过去了</p>
+                                    <span id="wifedays"></span>
+                                    <p class="wifedate">2025年1月29日</p>
+                                </div>
+                                <!-- 小组件3 -->
+                                <div class="widget-3">
+                                    <!-- 音乐曲绘 -->
+                                    <div class="widget-3-cover">
+                                        <img src="images/widget-3/cover.jpg" alt="">
+                                    </div>
+                                    <!-- 音乐信息 -->
+                                    <div class="widget-3-info">
+                                        <p class="widget-3-title">Starseed</p>
+                                        <p class="widget-3-singer">Feint、Leah Rye</p>
+                                    </div>
+                                    <!-- 音乐控件 -->
+                                    <div class="widget-3-btn">
+                                        <button onclick="playF()" id="play-pause"></button>
+                                    </div>
+                                    <!-- 音乐文件 -->
+                                    <audio src="audios/Feint、Leah Rye - Starseed.mp3" id="audio-1"></audio>
+                                </div>
+                                <!-- 小组件2 -->
+                                <div class="widget-2">
+                                    <div class="widget-2-text">
+                                        <p>爱你一生一世永不分离。</p>
+                                        <p
+                                            style="text-align: right;margin-right: 20px;font-size: 14px;font-family: '微软雅黑';font-weight: 200;margin-top: 4px;">
+                                            —— 李芊芊＆廖文轩
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右侧部分 -->
+                            <div class="sp-1-right">
+                                <div class="sp-1-time">
+                                    <div id="time"></div>
+                                </div>
+                                <div class="sp-date">
+                                    <div class="weekday-today">
+                                        <div id="today"></div>
+                                        <div id="weekday"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!-- 茶茶和MGC特区 -->
+                    <div class="sp-tea-mgc">
+                        <!-- 背景图片 -->
+                        <img src="images/sp-banner/tea-mgc.png" alt="" style="width: 100%;">
+                        <div class="w">
+                            <!-- 标题部分 -->
+                            <div class="sp-2-title">
+                                <p class="title"><span>茶茶和MGC</span>恋爱特区</p>
+                                <p class="subtitle"><span>Chafues'ill ＆ MGC</span> Special Love</p>
+                            </div>
+                            <!-- 左侧部分 -->
+                            <div class="sp-2-left">
+                                <!-- 小组件5 -->
+                                <div class="widget-5">
+                                    <!-- 头像和名字 -->
+                                    <div class="sp-2-user">
+                                        <div class="sp-2-icon">
+                                            <img src="images/sp-user-icon/mgc.jpg" alt="" id="sp-icon-1">
+                                            <img src="images/sp-user-icon/tea.jpg" alt="" id="sp-icon-2">
+                                        </div>
+                                        <div class="sp-2-icon-text">
+                                            <p>MGC</p>
+                                            <p>茶茶</p>
+                                        </div>
+                                    </div>
+                                    <!-- 文本---js -->
+                                    <div class="widget-5-text-js">
+                                        <p>我们一起走过了<span id="widget-5-lovedays"></span></p>
+                                        <p>我们相遇于<span>2024年4月13日</span></p>
+                                    </div>
+                                </div>
+                                <!-- 小组件6 -->
+                                <div class="widget-6">
+                                    <p class="widget-6-title">结婚后，我们继续走过了</p>
+                                    <span id="widget-6-lover"></span>
+                                    <p class="lovedate-3">2024年10月6日</p>
+                                </div>
+                                <!-- 小组件7 -->
+                                <div class="widget-7">
+                                    <!-- 音乐曲绘 -->
+                                    <div class="widget-7-cover">
+                                        <img src="images/widget-7/cover.jpg" alt="">
+                                    </div>
+                                    <!-- 音乐信息 -->
+                                    <div class="widget-7-info">
+                                        <p class="widget-7-title">p.h.</p>
+                                        <p class="widget-7-singer">SEVENTHLINKS、v flower</p>
+                                    </div>
+                                    <!-- 音乐控件 -->
+                                    <div class="widget-7-btn">
+                                        <button onclick="playF2()" id="play-pause-2"></button>
+                                    </div>
+                                    <!-- 音乐文件 -->
+                                    <audio src="audios/SEVENTHLINKS、v flower - p.h..mp3" id="audio-2"></audio>
+                                </div>
+                                <!-- 小组件8 -->
+                                <div class="widget-8">
+                                    <div class="widget-8-text">
+                                        <p>>Be faithful and unswerving.</p>
+                                        <p
+                                            style="text-align: right;margin-right: 20px;font-size: 14px;font-family: '微软雅黑';font-weight: 200;margin-top: 4px;">
+                                            —— 茶茶＆MGC
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 右侧部分 -->
+                            <div class="sp-2-right">
+                                <div class="sp-2-time">
+                                    <div id="time2"></div>
+                                </div>
+                                <div class="sp-date">
+                                    <div class="weekday-today">
+                                        <div id="today2"></div>
+                                        <div id="weekday2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <!-- 图表 -->
+    <div class="charts">
+        <!-- 标题 -->
+        <div class="charts-title">
+            <p class="title">图表</p>
+            <p class="subtitle">Chart</p>
+        </div>
+        <div class="w">
+            <div class="chart">
+                <div id="chart-1"></div>
+            </div>
+            <div class="chart">
+                <div id="chart-2"></div>
+            </div>
+            <div class="chart">
+                <div id="chart-3"></div>
+            </div>
+            <div class="chart">
+                <div id="chart-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 群明星 -->
+    <div class="humanstar-excel">
+        <!-- 标题 -->
+        <div class="humanstar-excel-title">
+            <p class="title" style=" text-shadow: #f7eff1 0 0 5px;">群明星</p>
+            <p class="subtitle">Team star</p>
+        </div>
+        <div class="w">
+            <!-- 成员部分 -->
+            <div class="human-excel-right">
+                <div class="humanstar-hang">
+                    <!-- 1 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/1.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">Data_19C</p>
+                            <p class="humanstar-day">入群时间：2023年1月30日</p>
+                            <p class="humanstar-day">入群<span id="f1"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/2.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">Ryobunoki.</p>
+                            <p class="humanstar-day">入群时间：2024年8月30日</p>
+                            <p class="humanstar-day">入群<span id="f2"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/3.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">かえりみちの微風</p>
+                            <p class="humanstar-day">入群时间：2024年1月30日</p>
+                            <p class="humanstar-day">入群<span id="f3"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/4.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">ST AS is ∑×∑ xi</p>
+                            <p class="humanstar-day">入群时间：2024年11月10日</p>
+                            <p class="humanstar-day">入群<span id="f4"></span>天</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="humanstar-hang">
+                    <!-- 5 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/5.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">触手Sama</p>
+                            <p class="humanstar-day">入群时间：2023年4月12日</p>
+                            <p class="humanstar-day">入群<span id="f5"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/6.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">Snownight</p>
+                            <p class="humanstar-day">入群时间：2024年5月12日</p>
+                            <p class="humanstar-day">入群<span id="f6"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/7.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">凝雨才不是笨蛋！</p>
+                            <p class="humanstar-day">入群时间：2023年3月29日</p>
+                            <p class="humanstar-day">入群<span id="f7"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/8.png" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">老黑Hentai|UWU</p>
+                            <p class="humanstar-day">入群时间：2024年4月18日</p>
+                            <p class="humanstar-day">入群<span id="f8"></span>天</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="humanstar-hang">
+                    <!-- 9 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/9.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">步六孤007</p>
+                            <p class="humanstar-day">入群时间：2025年1月25日</p>
+                            <p class="humanstar-day">入群<span id="f9"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/10.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">スターフォール</p>
+                            <p class="humanstar-day">入群时间：2024年3月1日</p>
+                            <p class="humanstar-day">入群<span id="f10"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/11.jpg" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">Error452 </p>
+                            <p class="humanstar-day">入群时间：2024年2月10日</p>
+                            <p class="humanstar-day">入群<span id="f11"></span>天</p>
+                        </div>
+                    </div>
+                    <!-- 12 -->
+                    <div class="humanstar">
+                        <!-- 群友头像 -->
+                        <div class="humanstar-icon">
+                            <img src="images/star/12.png" alt="">
+                        </div>
+                        <!-- 群友名字-入群天数 -->
+                        <div class="humanstar-name-day">
+                            <p class="humanstar-name">Chafues'ill</p>
+                            <p class="humanstar-day">入群时间：2023年4月7日</p>
+                            <p class="humanstar-day">入群<span id="f12"></span>天</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script id="1">
+    // 计算日期
+    var d1 = new Date("2023/1/27");// 定义相爱日期
+    var d2 = new Date();// 获取当前日期
+    var result = (d2 - d1) / (1000 * 60 * 60 * 24);// 计算相差天数
+    var daysBetween = parseInt(result)// 结果取整
+    console.log(daysBetween);// 输出结果---log
+    document.getElementById("lovedays-1").innerHTML = daysBetween;// 输出结果到HTML
+</script>
+<script id="2">
+    // widget3组件音乐播放/暂停控制
+    var btn = document.getElementById("play-pause")
+    btn.innerHTML = "Play"
+    var audio = document.getElementById("audio-1");// 获取音频文件
+    function Pause1() {
+        btn.innerHTML = "Play"
+        btn.style.border = "#666 solid 2px"
+        btn.style.color = "#666"
+    }
+    function playF() {
+        if (audio.paused) {
+            audio.play();// 如果音频文件为暂停状态 则播放
+            btn.innerHTML = "Pause"
+            btn.style.border = "#ffb7c5 solid 2px"
+            btn.style.color = "#ffb7c5"
+        } else {
+            audio.pause();// 如果音频文件不为暂停状态 则暂停
+            btn.innerHTML = "Play"
+            btn.style.border = "#666 solid 2px"
+            btn.style.color = "#666"
+        }
+    }
+</script>
+<script id="3">
+    // 计算日期
+    var w1 = new Date("2025/1/29");// 定义相爱日期
+    var w2 = new Date();// 获取当前日期
+    var result2 = (w2 - w1) / (1000 * 60 * 60 * 24);// 计算相差天数
+    var wifeDaysBetween = parseInt(result2)// 结果取整
+    console.log(wifeDaysBetween);// 输出结果---log
+    document.getElementById("wifedays").innerHTML = wifeDaysBetween + "天";// 输出结果到HTML
+</script>
+<script id="4">
+    // 获取现在日期
+    var today1 = new Date()
+
+    // 获取时分
+    var hours = today1.getHours();
+    var mins = today1.getMinutes();
+    if (mins < 10) {
+        mins = "0" + mins;
+    }
+
+    // 拼接
+    var time = hours + ":" + mins;
+
+    // 输出log
+    console.log(time);
+
+    // 输出到html
+    document.getElementById("time").innerHTML = time;
+</script>
+<script id="5">
+    var d = new Date();
+    // 日期
+    var years = d.getFullYear();
+    var months = d.getMonth() + 1;
+    var days = d.getDate();
+    var today = years + "年" + months + "月" + days + "日"
+    console.log(today);
+    document.getElementById("today").innerHTML = today;
+
+    // 星期
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var n = weekday[d.getDay()];
+    console.log(n); // 如果今天是星期二，则输出"Tuesday"
+    document.getElementById("weekday").innerHTML = n;
+</script>
+<script src="swiper/swiper-bundle.min.js"></script>
+<script id="swiper">
+    var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: 'bullets',
+            releaseOnEdges: true,
+            mousewheel: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        lazy: {
+            loadPrevNext: true,
+        },
+        speed: 1200,
+    });
+
+</script>
+<script id="6">
+    // 计算相差天数
+    var l1 = new Date();
+    var l2 = new Date("2024/4/13");
+    var result3 = (l1 - l2) / (1000 * 60 * 60 * 24);
+    var lovedays2 = parseInt(result3);
+    console.log(lovedays2);
+    document.getElementById("widget-5-lovedays").innerHTML = lovedays2 + "天";
+</script>
+<script id="7">
+    // 计算指定日期相差
+    var today = new Date();
+    var love2 = new Date("2024/10/6");
+    var result4 = (today - love2) / (1000 * 60 * 60 * 24);
+    var loveBet = parseInt(result4);
+    console.log(loveBet);
+    document.getElementById("widget-6-lover").innerHTML = loveBet + "天";
+</script>
+<script id="8">
+    // widget7组件音乐播放/暂停控制
+    var btn2 = document.getElementById("play-pause-2")
+    btn2.innerHTML = "Play"
+    var audio2 = document.getElementById("audio-2");// 获取音频文件
+    function playF2() {
+        if (audio2.paused) {
+            audio2.play();// 如果音频文件为暂停状态 则播放
+            btn2.innerHTML = "Pause"
+            btn2.style.border = "##0F63B8 solid 2px"
+            btn2.style.color = "#0F63B8"
+        } else {
+            audio2.pause();// 如果音频文件不为暂停状态 则暂停
+            btn2.innerHTML = "Play"
+            btn2.style.border = "#666 solid 2px"
+            btn2.style.color = "#666"
+        }
+    }
+</script>
+<script id="9">
+    // 解决多音乐同时播放问题
+    var audios = document.getElementsByTagName("audio");
+    // 暂停函数
+    function pauseAll() {
+        var self = this;
+        [].forEach.call(audios, function (i) {
+            // 将audios中其他的audio全部暂停
+            i !== self && i.pause();
+        })
+    }
+    // 给play事件绑定暂停函数
+    [].forEach.call(audios, function (i) {
+        i.addEventListener("play", pauseAll.bind(i));
+    })
+
+    const audioElement = document.querySelector('audio');
+
+    audioElement.addEventListener('pause', () => {
+
+
+
+
+
+    });
+</script>
+<script id="10">
+    // 获取现在日期
+    var today4 = new Date()
+
+    // 获取时分
+    var hours2 = today4.getHours();
+    var mins2 = today4.getMinutes();
+    if (mins2 < 10) {
+        mins2 = "0" + mins2;
+    }
+
+    // 拼接
+    var time2 = hours2 + ":" + mins2;
+
+    // 输出log
+    console.log(time2);
+
+    // 输出到html
+    document.getElementById("time2").innerHTML = time2;
+
+    var d9 = new Date();
+    // 日期
+    var years2 = d9.getFullYear();
+    var months2 = d9.getMonth() + 1;
+    var days2 = d9.getDate();
+    var today3 = years + "年" + months + "月" + days + "日"
+    console.log(today3);
+    document.getElementById("today2").innerHTML = today3;
+
+    // 星期
+    var weekday2 = new Array(7);
+    weekday2[0] = "Sunday";
+    weekday2[1] = "Monday";
+    weekday2[2] = "Tuesday";
+    weekday2[3] = "Wednesday";
+    weekday2[4] = "Thursday";
+    weekday2[5] = "Friday";
+    weekday2[6] = "Saturday";
+    var n2 = weekday[d9.getDay()];
+    console.log(n2); // 如果今天是星期二，则输出"Tuesday"
+    document.getElementById("weekday2").innerHTML = n2;
+</script>
+<script id="11">
+    // 计算入群天数
+    function getJoinDay(date) {
+        var today5 = new Date();// 获取时间
+        var joinDay = new Date(date);// 将形参的参数传到日期，铺垫计算
+        var joinBet = (today5 - joinDay) / (1000 * 60 * 60 * 24);// 计算相差
+        var joinBet = parseInt(joinBet);// 结果取整数
+        console.log(joinBet);// 输出
+        return joinBet;
+    }
+
+    document.getElementById("f1").innerHTML = getJoinDay(new Date("2023/1/30"));
+    document.getElementById("f2").innerHTML = getJoinDay(new Date("2024/8/30"));
+    document.getElementById("f3").innerHTML = getJoinDay(new Date("2023/1/30"));
+    document.getElementById("f4").innerHTML = getJoinDay(new Date("2024/11/10"));
+    document.getElementById("f5").innerHTML = getJoinDay(new Date("2023/4/12"));
+    document.getElementById("f6").innerHTML = getJoinDay(new Date("2024/5/16"));
+    document.getElementById("f7").innerHTML = getJoinDay(new Date("2023/3/29"));
+    document.getElementById("f8").innerHTML = getJoinDay(new Date("2024/4/18"));
+    document.getElementById("f9").innerHTML = getJoinDay(new Date("2025/1/25"));
+    document.getElementById("f10").innerHTML = getJoinDay(new Date("2024/3/1"));
+    document.getElementById("f11").innerHTML = getJoinDay(new Date("2024/2/10"));
+    document.getElementById("f12").innerHTML = getJoinDay(new Date("2023/4/7"));
+
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.js"></script>
+<script id="12">
+    var myChart1 = echarts.init(document.getElementById('chart-1'));
+
+    option1 = {
+        title: {
+            text: '群成员年龄分布',
+            subtext: '粗略统计',
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            top: '5%',
+            left: 'center'
+        },
+        series: [
+            {
+                // color: ['#2e317c', '#1ba784', '#888888'],
+                name: '比例',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                padAngle: 5,
+                itemStyle: {
+                    borderRadius: 10
+                },
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: 40,
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    { value: 99, name: '00后' },
+                    { value: 6, name: '90后' },
+                    { value: 31, name: '未知年龄' },
+                ]
+            }
+        ]
+    };
+
+    myChart1.setOption(option1);
+</script>
+<script id="13">
+    var myChart2 = echarts.init(document.getElementById('chart-2'));
+
+    option2 = {
+        title: {
+            text: 'Q龄统计'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        legend: {},
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            data: ['小于1年', '1-3年', '3-5年', '5-7年', '7年以上']
+        },
+        series: [
+            {
+                name: 'Q龄',
+                type: 'bar',
+                data: [3, 36, 30, 20, 47]
+            },
+        ]
+    };
+
+    myChart2.setOption(option2);
+</script>
+<script id="14">
+    var myChart3 = echarts.init(document.getElementById('chart-3'));
+
+    option3 = {
+        title: {
+            text: '性别统计情况'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['男', '女', '男娘', '武装直升机', '未知', '其他'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value'
+            }
+        ],
+        series: [
+            {
+                name: '人数',
+                type: 'bar',
+                barWidth: '60%',
+                data: [44, 34, 22, 6, 8, 22]
+            }
+        ]
+    };
+
+    myChart3.setOption(option3);
+</script>
+<script id="15">
+    var myChart4 = echarts.init(document.getElementById('chart-4'));
+
+    option4 = {
+        title: {
+            text: '群活跃度',
+            subtext: '1.23-1.29'
+        },
+        color: ['#FD7347'],
+        tooltip: {
+            formatter: '{a} <br/>{b} : {c}%'
+        },
+        series: [
+            {
+                name: '活跃度',
+                type: 'gauge',
+                progress: {
+                    show: true
+                },
+                detail: {
+                    valueAnimation: true,
+                    formatter: '{value}'
+                },
+                data: [
+                    {
+                        value: 48,
+                        name: '活跃度'
+                    }
+                ]
+            }
+        ]
+    };
+
+    myChart4.setOption(option4);
+</script>
+
+
+</html>
